@@ -1,0 +1,29 @@
+img {
+    object-fit: contain;
+}
+
+#ilustraciones img {
+    object-fit: cover;
+}
+
+#ilustraciones .carousel-item img{
+    border-radius: 2.25rem;
+}
+/*Animaciones*/
+@media (min-width:980px) {
+    #web div img {
+        transition: 0.4s;
+    }
+    #web div img:hover {
+        transform: scale(1.1);
+    }
+
+    #redes img {
+        border-radius: 2.25rem;
+        filter: grayscale(1) blur(10px);
+        transition: 0.5s;
+    }
+    #redes img:hover {
+        filter: none;
+    }
+}

@@ -1,0 +1,96 @@
+aside{
+    z-index: 1!important;
+}
+
+/* Imagenes Principales Formacion page*/
+
+.img-overflow {
+    max-height: 100%;
+    height: 15em;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.img-overflow img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/*Cajas cursos*/
+.cursos div{
+    min-height: 150px;
+    overflow: hidden;
+    text-align: center;
+    filter: saturate(0.25);
+    transition: 0.5s;
+}
+
+.cursos div p{
+    transform: rotate(30deg) matrix(2, 0, 0, 2, 30, 55);
+    font-weight: 700;
+    color: #F3F4F5;
+}
+
+.cursos div:nth-of-type(1){
+    background-color: rgb(99, 18, 248);
+}
+.cursos div:nth-of-type(2){
+    background-color: rgb(247, 129, 19);
+}
+.cursos div:nth-of-type(3){
+    background-color: rgb(3, 44, 158);
+}
+.cursos div:nth-of-type(4){
+    background-color: rgb(247, 165, 12);
+}
+.cursos div:nth-of-type(5){
+    background-color: rgb(1, 164, 228);
+}
+.cursos div:nth-of-type(6){
+    background-color: rgb(209, 196, 12);
+}
+.cursos div:nth-of-type(7){
+    background-color: rgb(105, 11, 255);
+}
+.cursos div:nth-of-type(8){
+    background-color: rgb(241, 7, 7);
+}
+
+@media (min-width:980px) {
+    .img-overflow {
+        max-height: 100%;
+        height: 25em;
+        width: 20em;
+    }
+    .img-overflow img {
+        transition: 0.5s;
+    }
+    .img-overflow img:hover {
+        transform: scale(1.05);
+    }
+
+    /**Animaciones**/
+    /*Barras*/
+    .border-growth {
+        display: inline-block;
+        font-weight: bolder;
+    }
+
+    .border-growth::after {
+        content: "";
+        display: block;
+        height: 5px;
+        width: 50px;
+        background-color: #1BD5BD;
+        transition: 0.5s;
+    }
+
+    .border-growth:hover::after {
+        width: 100%;
+        background-color: rgb(99, 99, 99);
+    }
+    .cursos div:hover{
+        filter: saturate(1);
+    }
+}

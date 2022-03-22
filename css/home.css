@@ -1,0 +1,66 @@
+main {
+    min-height: 100vh;
+    align-items: center;
+}
+
+.row>div{
+    max-height: 20vh;
+}
+
+/**Animación elementos **/
+main .col div {
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+main .col div:hover {
+    transform: translateY(-2em);
+    transition: 0.5s;
+}
+
+
+/** Color y disposición de los campos**/
+a{
+    color: #ffffff;
+}
+a:hover{
+    color:rgb(99, 99, 99)
+}
+.row>div img{
+    object-fit:cover ;
+    width: 100%;
+    filter: brightness(0.1) grayscale(1);
+    transition: 0.5s;
+    min-height: -webkit-fill-available;
+}
+
+/** Alinear Titulos **/
+a h3{
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+    
+}
+
+@media (min-width:980px) {
+    .row>div img{
+        border-radius: 2.25rem;
+    }
+    .row>div:not(.row>div:last-of-type){
+        max-height:700px;
+    }
+    .row>div:last-of-type{
+        max-height: 200px;
+    }
+
+    .row>div:hover img{
+        filter: none;
+        transform: scale(1.025);
+        }
+        
+    .row>div:hover h3{
+    visibility: hidden;
+    }
+}
